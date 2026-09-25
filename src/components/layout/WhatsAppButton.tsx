@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/config";
 import { motion } from "framer-motion";
 
 export function WhatsAppButton() {
-  const message = "Namaste, mujhe apne residential project ke electrical work ke baare mein consultation chahiye.";
+  const message = "Hello Innovate MEP Solutions, I would like to consult regarding our MEP project requirements.";
   const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(message)}`;
 
   return (

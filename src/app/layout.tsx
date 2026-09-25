@@ -16,9 +16,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Complete Residential Electrical Solutions in Delhi | Voltora",
-  description: "Professional residential electrical planning, AutoCAD design, BOQ, material supply and installation services in Delhi.",
+  title: "Innovate MEP Solutions | Complete Mechanical, Electrical & Plumbing Engineering",
+  description: "Complete MEP engineering and contracting services — Mechanical (HVAC), Electrical, Plumbing, BOQ estimation, material supply, installation and commissioning.",
 };
+
 
 export default function RootLayout({
   children,
@@ -30,7 +31,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col pt-[76px] md:pt-[84px]">
+      <body className="min-h-full flex flex-col pt-[60px] md:pt-[68px]">
         <Header />
         <main className="flex-1">
           {children}

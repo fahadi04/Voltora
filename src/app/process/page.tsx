@@ -34,7 +34,7 @@ export default function ProcessPage() {
             
             <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden group">
               <Image 
-                src="/images/sample-switchboard-layout.jpg" 
+                src="/images/electrical-layout-100sqyd.jpg" 
                 alt="Conduit Layout" 
                 fill 
                 className="object-cover group-hover:scale-105 transition-transform duration-500"

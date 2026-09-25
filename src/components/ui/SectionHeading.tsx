@@ -16,16 +16,16 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        "flex flex-col gap-4 mb-12",
+        "flex flex-col gap-3 mb-8",
         align === "center" ? "items-center text-center mx-auto" : "items-start text-left",
         className
       )}
     >
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground leading-tight">
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg md:text-xl text-foreground/80 max-w-[700px]">
+        <p className="text-sm sm:text-base text-foreground/75 max-w-[640px] leading-relaxed">
           {subtitle}
         </p>
       )}

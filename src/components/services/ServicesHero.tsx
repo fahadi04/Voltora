@@ -9,20 +9,20 @@ const slides = [
   {
     id: 1,
     image: "/images/hero-residential-electrical.jpg",
-    title: "Premium Electrical Services",
-    subtitle: "End-to-end planning and execution for modern homes.",
+    title: "Integrated MEP Solutions",
+    subtitle: "Complete Mechanical, Electrical & Plumbing solutions for modern buildings.",
   },
   {
     id: 2,
     image: "/images/concept-villa.jpg",
-    title: "Smart Home Integration",
-    subtitle: "Future-proof wiring and automation for luxury living.",
+    title: "Mechanical & HVAC Systems",
+    subtitle: "Air conditioning planning, ventilation, ducting, and precise equipment execution.",
   },
   {
     id: 3,
     image: "/images/concept-independent-house.jpg",
-    title: "Complete Rewiring & Upgrades",
-    subtitle: "Safe, reliable, and powerful electrical distribution.",
+    title: "Electrical & Plumbing Infrastructure",
+    subtitle: "Engineered power distribution, lighting design, and advanced water supply networks.",
   },
 ];
 

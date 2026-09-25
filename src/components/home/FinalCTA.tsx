@@ -10,12 +10,12 @@ export function FinalCTA() {
   };
 
   const openWhatsApp = () => {
-    const message = "Namaste, mujhe apne residential project ke electrical work ke baare mein consultation chahiye.";
+    const message = "Hello Innovate MEP Solutions, I would like to consult with you regarding our upcoming MEP project.";
     window.open(`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   return (
-    <section className="relative py-32 overflow-hidden bg-primary">
+    <section className="relative py-16 md:py-20 overflow-hidden bg-primary">
       {/* Background Visual */}
       <div 
         className="absolute inset-0 opacity-10"
@@ -30,24 +30,24 @@ export function FinalCTA() {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto"
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl mx-auto"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6">
-            Planning a New Home or Renovation?
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground mb-4 leading-tight">
+            Planning Your Next Project?
           </h2>
-          <p className="text-xl text-primary-foreground/80 mb-10">
-            Let&apos;s organize your electrical work before execution begins.
+          <p className="text-sm sm:text-base text-primary-foreground/80 mb-7 max-w-xl mx-auto font-light">
+            Talk to Innovate MEP Solutions for professional MEP design, estimation and project execution.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={scrollToContact} className="bg-accent text-accent-foreground hover:bg-accent/90">
-              Get Free Consultation
+          <div className="flex flex-col sm:flex-row gap-3.5 justify-center">
+            <Button size="lg" onClick={scrollToContact} className="h-11 px-7 text-sm font-semibold bg-accent text-accent-foreground hover:bg-accent/90">
+              Get a Free Consultation
             </Button>
-            <Button size="lg" variant="outline" onClick={openWhatsApp} className="border-border text-foreground hover:bg-surface">
+            <Button size="lg" variant="outline" onClick={openWhatsApp} className="h-11 px-7 text-sm font-semibold border-border text-foreground hover:bg-surface">
               WhatsApp Us
             </Button>
           </div>

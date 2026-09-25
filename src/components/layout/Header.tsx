@@ -10,11 +10,11 @@ import { siteConfig } from "@/lib/config";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "/services" },
-  { name: "How It Works", href: "/process" },
-  { name: "Projects", href: "/projects" },
-  { name: "For Contractors", href: "/contractors" },
-  { name: "About", href: "/about" },
+  { name: "About", href: "#about" },
+  { name: "Services", href: "#services" },
+  { name: "Projects", href: "#projects" },
+  { name: "Process", href: "#process" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export function Header() {
@@ -43,19 +43,24 @@ export function Header() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
           isScrolled
-            ? "bg-background/95 backdrop-blur-md border-border py-3 shadow-sm"
-            : "bg-background border-transparent py-5"
+            ? "bg-background/95 backdrop-blur-md border-border py-2.5 shadow-sm"
+            : "bg-background border-transparent py-3.5"
         )}
       >
         <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-2.5 group">
             <div className="bg-primary p-1.5 rounded-md group-hover:bg-accent transition-colors">
               <Zap className="h-5 w-5 text-primary-foreground" />
             </div>
-            <span className="font-bold text-xl tracking-tight text-foreground">
-              {siteConfig.name.split(" ")[0]}
-            </span>
+            <div className="flex flex-col">
+              <span className="font-bold text-lg md:text-xl tracking-tight text-foreground leading-tight">
+                INNOVATE <span className="text-accent">MEP</span>
+              </span>
+              <span className="text-[10px] uppercase tracking-widest text-foreground/60 font-semibold">
+                Solutions
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -73,7 +78,7 @@ export function Header() {
               ))}
             </ul>
             <Button onClick={scrollToContact} size="sm">
-              Get a Quote
+              Get a Free Consultation
             </Button>
           </nav>
 
@@ -103,9 +108,14 @@ export function Header() {
                 <div className="bg-primary p-1.5 rounded-md">
                   <Zap className="h-5 w-5 text-primary-foreground" />
                 </div>
-                <span className="font-bold text-xl text-foreground">
-                  {siteConfig.name.split(" ")[0]}
-                </span>
+                <div className="flex flex-col">
+                  <span className="font-bold text-lg text-foreground">
+                    INNOVATE <span className="text-accent">MEP</span>
+                  </span>
+                  <span className="text-[10px] uppercase tracking-widest text-foreground/60">
+                    Solutions
+                  </span>
+                </div>
               </Link>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -134,7 +144,7 @@ export function Header() {
             
             <div className="p-6 border-t border-border bg-surface/50">
               <Button onClick={scrollToContact} className="w-full" size="lg">
-                Get a Quote
+                Get a Free Consultation
               </Button>
             </div>
           </motion.div>

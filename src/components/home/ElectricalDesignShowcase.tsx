@@ -7,11 +7,11 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 
 const tabs = [
-  { id: "floor-plan", label: "Floor Plan", image: "/images/sample-floor-plan.jpg" },
-  { id: "electrical", label: "Electrical Points", image: "/images/sample-switchboard-layout.jpg" },
-  { id: "lighting", label: "Lighting", image: "/images/sample-lighting-plan.jpg" },
-  { id: "power", label: "Power & AC", image: "/images/sample-floor-plan.jpg" },
-  { id: "boq", label: "BOQ / Material", image: "/images/sample-floor-plan.jpg" },
+  { id: "electrical", label: "Electrical Layout", image: "/images/electrical-layout-100sqyd.jpg" },
+  { id: "hvac", label: "HVAC & Ducting", image: "/images/concept-villa.jpg" },
+  { id: "plumbing", label: "Plumbing & Drainage", image: "/images/sample-lighting-plan.jpg" },
+  { id: "floor-plan", label: "Integrated MEP Plan", image: "/images/sample-floor-plan.jpg" },
+  { id: "boq", label: "BOQ & Estimation", image: "/images/about-company.jpg" },
 ];
 
 export function ElectricalDesignShowcase() {
@@ -20,45 +20,45 @@ export function ElectricalDesignShowcase() {
   const activeImage = tabs.find((t) => t.id === activeTab)?.image;
 
   return (
-    <section className="py-24 bg-surface">
+    <section className="py-10 md:py-14 bg-surface">
       <div className="container mx-auto px-4 md:px-6">
         <SectionHeading
-          title="See What Professional Electrical Planning Looks Like"
-          subtitle="From electrical points to load planning and material estimation, every requirement can be organized before execution begins."
+          title="See What Professional MEP Engineering Looks Like"
+          subtitle="Integrated drawings, load calculations, and itemized BOQ estimation planned systematically before site execution begins."
         />
 
-        <div className="mt-16 flex flex-col lg:flex-row gap-12">
+        <div className="mt-10 flex flex-col lg:flex-row gap-8 items-start">
           {/* Tabs */}
-          <div className="flex-1 lg:max-w-xs flex flex-row lg:flex-col gap-2 overflow-x-auto pb-4 lg:pb-0 scrollbar-hide">
+          <div className="w-full lg:w-72 flex flex-row lg:flex-col gap-2 overflow-x-auto pb-3 lg:pb-0 scrollbar-hide">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center text-left px-6 py-4 rounded-xl transition-all whitespace-nowrap lg:whitespace-normal shrink-0 ${
+                className={`flex items-center text-left px-4 py-3 rounded-xl transition-all whitespace-nowrap lg:whitespace-normal shrink-0 text-sm ${
                   activeTab === tab.id
-                    ? "bg-primary text-primary-foreground shadow-md"
-                    : "bg-background text-foreground/70 hover:bg-background/80 hover:text-foreground"
+                    ? "bg-primary text-primary-foreground shadow-md font-semibold"
+                    : "bg-background text-foreground/70 hover:bg-background/80 hover:text-foreground font-medium"
                 }`}
               >
-                <span className="font-semibold">{tab.label}</span>
+                <span>{tab.label}</span>
               </button>
             ))}
           </div>
 
           {/* Visual Showcase */}
-          <div className="flex-[3] relative">
-            <div className="absolute top-4 left-4 z-10 bg-accent text-accent-foreground px-3 py-1 text-xs font-bold tracking-wider uppercase rounded">
-              Concept / Sample Design
+          <div className="flex-1 w-full relative">
+            <div className="absolute top-3 left-3 z-10 bg-accent text-accent-foreground px-2.5 py-1 text-[11px] font-bold tracking-wider uppercase rounded">
+              MEP Engineering Deliverable
             </div>
             
-            <div className="relative h-[400px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-xl bg-background">
+            <div className="relative h-[320px] sm:h-[400px] lg:h-[450px] w-full rounded-2xl overflow-hidden shadow-lg bg-background border border-border/50">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTab}
-                  initial={{ opacity: 0, scale: 1.05 }}
+                  initial={{ opacity: 0, scale: 1.03 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4 }}
+                  transition={{ duration: 0.35 }}
                   className="absolute inset-0"
                 >
                   <Image
@@ -73,9 +73,9 @@ export function ElectricalDesignShowcase() {
               </AnimatePresence>
             </div>
             
-            <div className="mt-8 text-center lg:text-left">
-              <Button size="lg" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
-                Request Your House Electrical Plan
+            <div className="mt-6 text-center lg:text-left">
+              <Button size="lg" className="h-11 px-6 text-sm" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>
+                Request MEP Project Consultation
               </Button>
             </div>
           </div>

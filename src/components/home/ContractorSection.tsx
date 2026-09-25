@@ -19,45 +19,45 @@ export function ContractorSection() {
   };
 
   return (
-    <section id="contractors" className="py-24 bg-surface text-foreground relative overflow-hidden">
+    <section id="contractors" className="py-10 md:py-14 bg-surface text-foreground relative overflow-hidden">
       {/* Decorative background elements */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-accent/5 rounded-full blur-[90px] pointer-events-none" />
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -25 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6 leading-tight">
-              The Preferred Electrical Partner For <span className="text-accent">Industry Leaders</span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight mb-4 leading-tight">
+              The Preferred MEP Partner For <span className="text-accent">Contractors &amp; Builders</span>
             </h2>
-            <p className="text-lg text-foreground/70 mb-10 leading-relaxed max-w-xl font-light">
-              We collaborate with top-tier civil contractors, architects, and interior designers who refuse to compromise on quality. When you partner with Voltora, you get a dedicated engineering team that ensures the electrical backbone of your project is executed flawlessly, on time, and without excuses.
+            <p className="text-sm sm:text-base text-foreground/75 mb-7 leading-relaxed max-w-xl font-light">
+              We collaborate with general contractors, architects, civil engineers, and developers who demand engineering precision and dependable execution. When you partner with Innovate MEP Solutions, you get a dedicated team that ensures all Mechanical, Electrical, and Plumbing systems are executed smoothly, on time, and to exacting standards.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
-              <Button size="lg" onClick={scrollToContact} className="w-full sm:w-auto h-14 px-8 text-base shadow-[0_0_20px_rgba(234,179,8,0.3)]">
-                Discuss Partnership
+            <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
+              <Button size="lg" onClick={scrollToContact} className="w-full sm:w-auto h-12 px-7 text-sm font-semibold shadow-md shadow-accent/20">
+                Discuss MEP Partnership
               </Button>
-              <div className="text-sm text-foreground/50 text-center sm:text-left flex flex-col justify-center">
-                <span>Looking for a reliable technical partner?</span>
-                <span className="font-medium text-foreground/70">Let's build together.</span>
+              <div className="text-xs text-foreground/50 text-center sm:text-left flex flex-col justify-center pt-1">
+                <span>Looking for a trusted MEP contractor?</span>
+                <span className="font-semibold text-foreground/70">Partnerships of Trust.</span>
               </div>
             </div>
           </motion.div>
           
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            transition={{ duration: 0.7, delay: 0.15 }}
+            className="relative pb-6"
           >
-            <div className="absolute inset-0 bg-accent/10 rounded-3xl translate-x-4 translate-y-4 border border-accent/20" />
-            <div className="relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl border border-border/50">
+            <div className="absolute inset-0 bg-accent/10 rounded-2xl translate-x-3 translate-y-3 border border-accent/20" />
+            <div className="relative h-[360px] sm:h-[400px] w-full rounded-2xl overflow-hidden shadow-xl border border-border/50">
               <Image
                 src="/images/contractor-partnership.jpg"
                 alt="Partnering with contractors and architects"
@@ -68,9 +68,9 @@ export function ContractorSection() {
             </div>
             
             {/* Overlay Cards for Partners */}
-            <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[95%] glass-effect border border-border/50 p-6 rounded-2xl shadow-xl">
-              <p className="text-center text-xs font-bold uppercase tracking-widest text-accent mb-4">Trusted By</p>
-              <div className="flex flex-wrap justify-center gap-x-8 gap-y-4">
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[92%] glass-effect border border-border/50 p-4 rounded-xl shadow-lg">
+              <p className="text-center text-[10px] font-bold uppercase tracking-widest text-accent mb-2.5">Trusted By Industry Stakeholders</p>
+              <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
                 {partners.map((partner, index) => {
                   const Icon = partner.icon;
                   return (
@@ -79,11 +79,11 @@ export function ContractorSection() {
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                      className="flex flex-col items-center gap-2"
+                      transition={{ duration: 0.35, delay: 0.3 + index * 0.08 }}
+                      className="flex items-center gap-1.5"
                     >
-                      <Icon className="h-6 w-6 text-foreground/70" />
-                      <span className="font-medium text-xs text-foreground/70">
+                      <Icon className="h-4 w-4 text-foreground/70" />
+                      <span className="font-medium text-xs text-foreground/80">
                         {partner.name}
                       </span>
                     </motion.div>
